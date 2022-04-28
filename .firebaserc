@@ -1,5 +1,14 @@
 {
   "projects": {
     "default": "alanpucci-labiv-juegos"
+  },
+  "targets": {
+    "alanpucci-labiv-juegos": {
+      "hosting": {
+        "tp-labiv": [
+          "alanpucci-labiv-juegos"
+        ]
+      }
+    }
   }
 }
