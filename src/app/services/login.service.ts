@@ -80,4 +80,8 @@ export class LoginService {
       this.spinner.hide();
     }
   }
+
+  getAuth() {
+    return this.auth.authState;
+  }
 }

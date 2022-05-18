@@ -1,7 +1,8 @@
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+
 /* You can add global styles to this file, and also import other style files */
 
 html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 
 /* based on angular-toastr css https://github.com/Foxandxss/angular-toastr/blob/cb508fe6801d6b288d3afc525bb40fee1b101650/dist/angular-toastr.css */
 
@@ -195,3 +196,40 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
       width: 25em;
     }
   }
+
+  :root {
+    --board-color: #d8ebe4;
+    --snake-color: #fed049;
+    --food-color: #007580;
+    --dpad-radius: 17%;
+    --dpad-radius-in: 20%;
+    --dpad-fg: #ddd;
+    --dpad-fg-hover: #eee;
+    --dpad-bg: #fff;
+    --arrowcolor: #aaa;
+    --tri-sml-a: 13px;
+    --tri-sml-b: 19px;
+    --tri-lrg-a: 13px;
+    --tri-lrg-b: 19px;
+    --dpad-arrow-shift: 5px;
+    --dpad-arrow-move: 35%;
+ }
+  body {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    background-color: var(--background-color);
+    font-family: 'Anton', sans-serif;
+ }
+  .snake {
+    background-color: var(--snake-color);
+    border: 0.25vmin solid black;
+    transition: all 0.3ms ease-in;
+ }
+  .food {
+    border-radius: 50%;
+    background-color: var(--food-color);
+    border: 0.25vmin solid black;
+    transition: all 0.3ms ease-in;
+ }
+  

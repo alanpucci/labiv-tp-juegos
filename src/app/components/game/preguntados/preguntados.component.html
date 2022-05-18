@@ -1,0 +1,23 @@
+<div class="preguntados" *ngIf="!beginGame; else elseBlock">
+    <img src="../../../../assets/preguntados.png" class="preguntados-image" />
+    <img src="../../../../assets/preguntados-title.png" class="preguntados-title" />
+    <button mat-raised-button color="primary" (click)="start()">Comenzar</button>
+</div>
+<ng-template #elseBlock>
+    <div class="preguntados">
+        <h3 style="align-self:flex-end;">Intentos restantes: {{lives}}</h3>
+        <img [src]="flagImage">
+        <h1>¿De qué país es la bandera?</h1>
+        <div>
+            <div>
+                <button mat-raised-button color="primary" (click)="answer(flags[0])">{{flags[0]}}</button>
+                <button mat-raised-button color="primary" (click)="answer(flags[1])">{{flags[1]}}</button>
+            </div>
+            <div>
+                <button mat-raised-button color="primary" (click)="answer(flags[2])">{{flags[2]}}</button>
+                <button mat-raised-button color="primary" (click)="answer(flags[3])">{{flags[3]}}</button>
+            </div>
+        </div>
+            <h3>Puntaje: {{score}}</h3>
+    </div>
+</ng-template>

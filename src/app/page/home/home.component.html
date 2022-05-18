@@ -1,9 +1,26 @@
 <app-header></app-header>
-<video autoplay muted loop id="myVideo">
-    <source src="../../../assets/home.mp4" type="video/mp4">
-</video>
-<div class="container">
-    <div class="col-8 col-md-6 col-lg-4 content">
-        <h1>Bienvenido a la home</h1>
+<div style="position:relative; z-index: 1;">
+    <div class="game-image-container">
+        <button (click)="pickGame('ahorcado')">
+            <img src="../../../assets/ahorcado.png" class="img-thumbnail" class="card-button" />
+        </button>
+        <button (click)="pickGame('mayormenor')">
+            <img src="../../../assets/cartas.png" class="img-thumbnail" class="card-button" />
+        </button>
+        <button (click)="pickGame('preguntados')">
+            <img src="../../../assets/preguntados.png" class="img-thumbnail" class="card-button" />
+        </button>
+        <button (click)="pickGame('vibora')">
+            <img src="../../../assets/snake.png" class="img-thumbnail" class="card-button" />
+        </button>
+    </div>
+    <div class="home-content">
+        <div class="game">
+            <router-outlet></router-outlet>
+        </div>
+        <!-- <app-chat></app-chat> -->
+        <app-chat></app-chat>
     </div>
 </div>
+<ng-particles [id]="id" [options]="particlesOptions" [particlesInit]="particlesInit"
+              (particlesLoaded)="particlesLoaded($event)"></ng-particles>

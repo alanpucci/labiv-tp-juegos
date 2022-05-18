@@ -1,0 +1,25 @@
+:host{
+    width: 100%;
+    height: 100%;
+}
+
+
+.preguntados-image{
+    height:200px;
+    width:200px;
+}
+
+.preguntados{
+    width: 100%;
+    height: 100%;
+    padding:20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content:space-evenly;
+}
+
+button{
+    margin:10px;
+    width:300px;
+}

@@ -1,0 +1,37 @@
+:host{
+    width: 100%;
+}
+
+h3{
+    color:black;
+}
+
+element.syle
+{
+    background-position-x: 225px;
+    background-position-y: 315px;
+
+}
+
+.interfaz
+{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    color: white;
+}
+
+.carta
+{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.higher-lower{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content:space-evenly;
+}

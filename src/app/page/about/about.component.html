@@ -1,8 +1,6 @@
 <app-header></app-header>
-<video autoplay muted loop id="myVideo">
-    <source src="../../../assets/about.mp4" type="video/mp4">
-</video>
-
+<ng-particles [id]="id" [options]="particlesOptions" [particlesInit]="particlesInit"
+              (particlesLoaded)="particlesLoaded($event)"></ng-particles>
 <div class="container">
     <div class="col-7 col-sm-5 col-md-4 col-lg-3 content">
         <h2>Hola!</h2>
