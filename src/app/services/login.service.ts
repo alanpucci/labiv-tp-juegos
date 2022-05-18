@@ -9,6 +9,7 @@ import { ERROR, SUCCESS } from './login.types';
   providedIn: 'root'
 })
 export class LoginService {
+  user:any;
 
   constructor(private router:Router, private auth: AngularFireAuth, private spinner: NgxSpinnerService,
               private ngZone:NgZone, private toastr: ToastrService,) { }
@@ -51,10 +52,11 @@ export class LoginService {
     try {
       this.spinner.show();
       if(!email || !password) return this.showError(ERROR.EMPTY_FIELDS);
-      const user = await this.auth.signInWithEmailAndPassword(email, password)
-      if(user){
+      const userDB = await this.auth.signInWithEmailAndPassword(email, password)
+      if(userDB){
+        this.user=userDB;
         this.ngZone.run(() => {
-          this.router.navigate(['home']);
+          this.router.navigateByUrl('/home');
         });
       }
     } catch (error:any) {
@@ -79,6 +81,13 @@ export class LoginService {
     } finally{
       this.spinner.hide();
     }
+  }
+
+  async logout(){
+    this.user=null;
+    await this.auth.signOut();
+    this.router.navigateByUrl('');
+
   }
 
   getAuth() {

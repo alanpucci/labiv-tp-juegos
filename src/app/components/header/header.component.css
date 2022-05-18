@@ -3,3 +3,8 @@ nav{
     z-index: 100;
     width: 100%;
 }
+
+button{
+    border:none;
+    background-color: transparent;
+}
