@@ -13,10 +13,10 @@ import { AuthGuard } from './guards/auth.guard';
 
 const routes: Routes = [
   {path:'', pathMatch:'full', redirectTo:'/login'},
-  {path:'login', canActivate:[!AuthGuard], component:LoginModule},
+  {path:'login',  component:LoginModule},
   {path:'about', component:AboutComponent},
   {path:'chat', component:ChatComponent},
-  {path:'home', component:HomeComponent, canActivate:[AuthGuard], children:[
+  {path:'home', component:HomeComponent, children:[
     {path:'', pathMatch:'full', redirectTo:'/home/ahorcado'},
     {path:'ahorcado', component:HangmanComponent},
     {path:'mayormenor', component:HigherlowerComponent},

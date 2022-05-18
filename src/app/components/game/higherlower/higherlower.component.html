@@ -6,7 +6,9 @@
         <div class="carta" style='background: url(../../../../assets/cartas.jpeg); width: 225px; height: 315px; background-position: right {{right}}px bottom {{bottom}}px;'></div>
     </div>
     <div class="interfaz">
-        <h3>Indique si la proxima carta sera mayor o menor:</h3><br><button (click)="apuestaMayor()">Mayor</button><button (click)="apuestaMenor()">Menor</button><br>
+        <h3>¿Mayor o menor?</h3>
+        <button mat-raised-button color="primary" (click)="apuestaMayor()">Mayor</button>
+        <button mat-raised-button color="primary" (click)="apuestaMenor()">Menor</button><br>
         <h3>Total puntaje: {{aciertos*10}}</h3>
     </div>
 </div>

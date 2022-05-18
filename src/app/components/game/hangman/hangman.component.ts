@@ -6,7 +6,7 @@ import { HangmanService } from 'src/app/services/hangman/hangman.service';
 @Component({
   selector: 'app-hangman',
   templateUrl: './hangman.component.html',
-  styleUrls: ['./hangman.component.scss'],
+  styleUrls: ['./hangman.component.css'],
 })
 export class HangmanComponent implements OnInit {
   question: string = '';

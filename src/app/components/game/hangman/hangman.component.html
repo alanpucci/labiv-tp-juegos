@@ -3,9 +3,15 @@
     <app-hangman-display (gameFinished)="onGameFinished()" [guesses]="guesses" [question]="question"></app-hangman-display>
     <app-hangman-question [guesses]="guesses" [question]="question"></app-hangman-question>
   </div>
-  <ng-container *ngIf="!restartGameBtnShown else restartGameBtn">
+  <div class="keyboard">
+  <ng-container  *ngIf="!restartGameBtnShown else restartGameBtn">
     <app-hangman-keyboard (keyPressed)="guess($event)" [question]="question"></app-hangman-keyboard>
+    <div class="guessed">
+      <h3>Letras elegidas:</h3>
+      <p *ngFor="let letter of guesses;">{{letter}}</p>
+    </div>
   </ng-container>
+  </div>
 </div>
 <ng-template #restartGameBtn>
   <button class="btn" (click)="reset()">

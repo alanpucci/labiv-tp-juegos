@@ -10,7 +10,12 @@ element.syle
 {
     background-position-x: 225px;
     background-position-y: 315px;
+}
 
+button{
+    height:40px;
+    width:200px;
+    margin:20px
 }
 
 .interfaz

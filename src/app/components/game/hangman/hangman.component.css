@@ -1,0 +1,21 @@
+.hangman {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content:space-evenly;
+}
+
+.keyboard{
+  flex-direction: column;
+}
+
+.guessed{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+p{
+  padding:0px 5px;
+}
