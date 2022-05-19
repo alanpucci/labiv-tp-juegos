@@ -1,13 +1,13 @@
 <div class="chat-window">
 
-    <h1>Chat</h1>
+    <h1>Sala de conversación</h1>
     <hr>
     <div style="height:350px">
         <div class="app-message" id="app-message">
             <div *ngFor="let chat of chatService.chats" [ngClass]="{'text-right': chatService.userLog.uid == chat.uid,
                                                                     'text-left': chatService.userLog.uid != chat.uid}">
-                <span class="badge" [ngClass]="{'bg-success': chatService.userLog.uid == chat.uid,
-                'bg-primary': chatService.userLog.uid != chat.uid}">{{splitUserFromEmail(chat.email)}}</span>
+                <span class="badge" [ngClass]="{'bg-primary': chatService.userLog.uid == chat.uid,
+                'bg-secondary': chatService.userLog.uid != chat.uid}">{{splitUserFromEmail(chat.email)}}</span>
                 <p>{{chat.message}}</p>
                 <span class="date">{{chat.date}}</span>
             </div>

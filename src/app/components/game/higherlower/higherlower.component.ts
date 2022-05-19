@@ -12,6 +12,7 @@ export class HigherlowerComponent implements OnInit {
   bottom:number = 0;
   aciertos:number = 0;
   numeroAnterior:number = 0;
+  beginGame=false;
 
   constructor() { 
   }
@@ -21,6 +22,10 @@ export class HigherlowerComponent implements OnInit {
     this.numeroAnterior = cartaAzar%13;
     this.right = (225 * (cartaAzar % 13));
     this.bottom = ( Math.trunc(cartaAzar / 13) * 315);
+  }
+
+  start(){
+    this.beginGame=true;
   }
 
   getSpriteStyle = function(id:number)

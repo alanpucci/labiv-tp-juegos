@@ -15,6 +15,7 @@ export class HangmanComponent implements OnInit {
   category: string = '';
   restartGameBtnShown = false;
   word="";
+  beginGame=false;
   constructor(
     private hangmanService: HangmanService,
     private location: Location,
@@ -26,6 +27,10 @@ export class HangmanComponent implements OnInit {
         this.word = data.body.Word
         this.pickNewQuestion();
       });
+  }
+
+  start(){
+    this.beginGame=true;
   }
 
   getQuestions(){
