@@ -32,6 +32,12 @@ MIT
 @angular/core
 MIT
 
+@angular/fire
+MIT
+
+@angular/forms
+MIT
+
 @angular/material
 MIT
 The MIT License
@@ -62,6 +68,150 @@ MIT
 
 @angular/router
 MIT
+
+@babel/runtime
+MIT
+MIT License
+
+Copyright (c) 2014-present Sebastian McKenzie and other contributors
+
+Permission is hereby granted, free of charge, to any person obtaining
+a copy of this software and associated documentation files (the
+"Software"), to deal in the Software without restriction, including
+without limitation the rights to use, copy, modify, merge, publish,
+distribute, sublicense, and/or sell copies of the Software, and to
+permit persons to whom the Software is furnished to do so, subject to
+the following conditions:
+
+The above copyright notice and this permission notice shall be
+included in all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,
+EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
+MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND
+NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE
+LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION
+OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION
+WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+
+
+@firebase/analytics
+Apache-2.0
+
+@firebase/app
+Apache-2.0
+
+@firebase/app-check
+Apache-2.0
+
+@firebase/app-compat
+Apache-2.0
+
+@firebase/auth
+Apache-2.0
+
+@firebase/auth-compat
+Apache-2.0
+
+@firebase/component
+Apache-2.0
+
+@firebase/database
+Apache-2.0
+
+@firebase/database-compat
+Apache-2.0
+
+@firebase/firestore
+Apache-2.0
+
+@firebase/firestore-compat
+Apache-2.0
+
+@firebase/installations
+Apache-2.0
+
+@firebase/logger
+Apache-2.0
+
+@firebase/messaging
+Apache-2.0
+
+@firebase/remote-config
+Apache-2.0
+
+@firebase/storage
+Apache-2.0
+
+@firebase/storage-compat
+Apache-2.0
+
+@firebase/util
+Apache-2.0
+
+@firebase/webchannel-wrapper
+Apache-2.0
+
+firebase/analytics
+
+firebase/app
+
+firebase/app-check
+
+firebase/compat/app
+
+firebase/compat/auth
+
+firebase/compat/database
+
+firebase/compat/firestore
+
+firebase/compat/storage
+
+firebase/messaging
+
+firebase/remote-config
+
+idb
+ISC
+ISC License (ISC)
+Copyright (c) 2016, Jake Archibald <jaffathecake@gmail.com>
+
+Permission to use, copy, modify, and/or distribute this software for any purpose with or without fee is hereby granted, provided that the above copyright notice and this permission notice appear in all copies.
+
+THE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL WARRANTIES WITH REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR ANY SPECIAL, DIRECT, INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS, WHETHER IN AN ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
+
+
+ng-particles
+MIT
+
+ngx-spinner
+MIT
+
+ngx-toastr
+MIT
+The MIT License (MIT)
+
+Copyright (c) Scott Cooper <scttcper@gmail.com>
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+
 
 rxjs
 Apache-2.0
@@ -283,6 +433,126 @@ INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES WHATSOEVER RESULTING FROM
 LOSS OF USE, DATA OR PROFITS, WHETHER IN AN ACTION OF CONTRACT, NEGLIGENCE OR
 OTHER TORTIOUS ACTION, ARISING OUT OF OR IN CONNECTION WITH THE USE OR
 PERFORMANCE OF THIS SOFTWARE.
+
+tsparticles
+MIT
+
+tsparticles-engine
+MIT
+
+tsparticles-interaction-external-attract
+MIT
+
+tsparticles-interaction-external-bounce
+MIT
+
+tsparticles-interaction-external-bubble
+MIT
+
+tsparticles-interaction-external-connect
+MIT
+
+tsparticles-interaction-external-grab
+MIT
+
+tsparticles-interaction-external-pause
+MIT
+
+tsparticles-interaction-external-push
+MIT
+
+tsparticles-interaction-external-remove
+MIT
+
+tsparticles-interaction-external-repulse
+MIT
+
+tsparticles-interaction-external-trail
+MIT
+
+tsparticles-interaction-particles-attract
+MIT
+
+tsparticles-interaction-particles-collisions
+MIT
+
+tsparticles-interaction-particles-links
+MIT
+
+tsparticles-move-base
+MIT
+
+tsparticles-move-parallax
+MIT
+
+tsparticles-particles.js
+MIT
+
+tsparticles-plugin-absorbers
+MIT
+
+tsparticles-plugin-emitters
+MIT
+
+tsparticles-plugin-polygon-mask
+MIT
+
+tsparticles-shape-circle
+MIT
+
+tsparticles-shape-image
+MIT
+
+tsparticles-shape-line
+MIT
+
+tsparticles-shape-polygon
+MIT
+
+tsparticles-shape-square
+MIT
+
+tsparticles-shape-star
+MIT
+
+tsparticles-shape-text
+MIT
+
+tsparticles-slim
+MIT
+
+tsparticles-updater-angle
+MIT
+
+tsparticles-updater-color
+MIT
+
+tsparticles-updater-life
+MIT
+
+tsparticles-updater-opacity
+MIT
+
+tsparticles-updater-out-modes
+MIT
+
+tsparticles-updater-roll
+MIT
+
+tsparticles-updater-size
+MIT
+
+tsparticles-updater-stroke-color
+MIT
+
+tsparticles-updater-tilt
+MIT
+
+tsparticles-updater-twinkle
+MIT
+
+tsparticles-updater-wobble
+MIT
 
 zone.js
 MIT

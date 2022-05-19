@@ -16,7 +16,7 @@ const routes: Routes = [
   {path:'login',  component:LoginModule},
   {path:'about', component:AboutComponent},
   {path:'chat', component:ChatComponent},
-  {path:'home', component:HomeComponent, children:[
+  {path:'home', component:HomeComponent, canActivate:[AuthGuard], children:[
     {path:'', pathMatch:'full', redirectTo:'/home/ahorcado'},
     {path:'ahorcado', component:HangmanComponent},
     {path:'mayormenor', component:HigherlowerComponent},
