@@ -11,7 +11,6 @@ export class ChatService {
   private itemsCollection?: AngularFirestoreCollection<any>;
   public chats: Message[] = [];
   public userLog: any = {};
-  elements: any;
 
   constructor(private authService: LoginService,private afs: AngularFirestore) {
     this.authService.getAuth().subscribe(user => {
@@ -25,17 +24,12 @@ export class ChatService {
     }
 
   loadMessages() {
-    this.itemsCollection = this.afs.collection<Message>('chats', ref => ref.orderBy('date', 'desc').limit(10));
+    this.itemsCollection = this.afs.collection<Message>('chats', ref => ref.orderBy('date', 'desc').limit(100));
     return this.itemsCollection.valueChanges().subscribe(chats => {
       this.chats = [];
       for (let chat of chats) {
         this.chats.unshift(chat);
       }
-      setTimeout(() => {
-        this.elements = document.getElementById('app-message');
-        this.elements.scrollTop = this.elements.scrollHeight;
-
-      }, 20);
     });
   }
 

@@ -1,0 +1,22 @@
+.modal-container{
+    display: flex;
+    flex-direction: column;
+    padding: 30px 60px;
+    height: 400px;
+    width: 600px;
+}
+
+h1{
+    font-weight: bold;
+}
+
+.radio-group{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 60px;
+}
+
+.radio-container{
+    padding:10px 0;
+}

@@ -2,6 +2,13 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { MoveDirection, ClickMode, HoverMode, OutMode, Container, Engine } from "tsparticles-engine";
 import { loadFull } from "tsparticles";
+import { HighscoreService } from 'src/app/services/highscore/highscore.service';
+import { map } from 'rxjs';
+import { particlesConfig } from '../../utils/utils';
+import { Game, Highscore } from 'src/app/models/highscore/highscore';
+import { MatDialog } from '@angular/material/dialog';
+import { PollComponent } from 'src/app/components/poll/poll.component';
+import { MatTabChangeEvent } from '@angular/material/tabs';
 
 @Component({
   selector: 'app-home',
@@ -11,79 +18,11 @@ import { loadFull } from "tsparticles";
 export class HomeComponent implements OnInit {
 
   id = "tsparticles";
+  highscore:Highscore[]=[];
+  game:Game="ahorcado";
+  particlesOptions = particlesConfig;
 
-  particlesOptions = {
-    background: {
-      color: {
-        value: "#000"
-      }
-    },
-    fpsLimit: 120,
-    interactivity: {
-      events: {
-        onClick: {
-          enable: true,
-          mode: ClickMode.push
-        },
-        onHover: {
-          enable: true,
-          mode: HoverMode.repulse
-        },
-        resize: true
-      },
-      modes: {
-        push: {
-          quantity: 4
-        },
-        repulse: {
-          distance: 100,
-          duration: 0.4
-        }
-      }
-    },
-    particles: {
-      color: {
-        value: "#ffffff"
-      },
-      links: {
-        color: "#ffffff",
-        distance: 150,
-        enable: true,
-        opacity: 0.5,
-        width: 1
-      },
-      collisions: {
-        enable: true
-      },
-      move: {
-        direction: MoveDirection.none,
-        enable: true,
-        outModes: {
-          default: OutMode.bounce
-        },
-        random: false,
-        speed: 1,
-        straight: false
-      },
-      number: {
-        density: {
-          enable: true,
-          area: 800
-        },
-        value: 180
-      },
-      opacity: {
-        value: 0.5
-      },
-      shape: {
-        type: "circle"
-      },
-      size: {
-        value: {min: 1, max: 5 },
-      }
-    },
-    detectRetina: true
-  };
+  constructor(private router:Router, private highscoreService:HighscoreService, public dialog: MatDialog) { }
 
   particlesLoaded(container: Container): void {
   }
@@ -91,11 +30,36 @@ export class HomeComponent implements OnInit {
   async particlesInit(engine: Engine): Promise<void> {
     await loadFull(engine);
   }
-  constructor(private router:Router) { }
-  ngOnInit(): void {
+  async ngOnInit() {
+    const locations = window.location.pathname.split('/');
+    this.game = locations[locations.length-1] as Game;
+    this.getHighscore();
   }
 
-  pickGame(game:string){
+  getHighscore(): void {
+    this.highscoreService.getAll(this.game)?.valueChanges().subscribe((data:Highscore[]) => {
+      this.highscore = data;
+    });
+  }
+
+  pickGame(game:Game){
+    this.game=game;
+    this.getHighscore();
     this.router.navigateByUrl('home/'+game);
+  }
+
+  handlePoll(open:boolean){
+    if(open){
+      const dialogRef = this.dialog.open(PollComponent);
+  
+      dialogRef.afterClosed().subscribe(result => {
+        console.log(`Dialog result: ${result}`);
+      });
+    }
+  }
+
+  onTabChanged = (tabChangeEvent: MatTabChangeEvent): void => {
+    const chat:any = document.getElementById('app-message');
+    chat.scrollTop = chat.scrollHeight;
   }
 }

@@ -55,6 +55,7 @@ export class LoginService {
       const userDB = await this.auth.signInWithEmailAndPassword(email, password)
       if(userDB){
         this.user=userDB;
+        localStorage.setItem('user', JSON.stringify(this.user));
         this.ngZone.run(() => {
           this.router.navigateByUrl('/home');
         });
@@ -86,11 +87,15 @@ export class LoginService {
   async logout(){
     this.user=null;
     await this.auth.signOut();
+    localStorage.clear();
     this.router.navigateByUrl('');
-
   }
 
   getAuth() {
     return this.auth.authState;
+  }
+
+  isAuthenticated(){
+    return JSON.parse(localStorage.getItem('user')!);
   }
 }

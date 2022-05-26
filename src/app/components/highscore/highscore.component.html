@@ -1,0 +1,18 @@
+<div class="highscore-container">
+    <table>
+        <thead>
+            <tr>
+                <th></th>
+                <th>Nombre usuario</th>
+                <th>Puntaje</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let score of highscore; let i=index">
+                <td>{{i+1}}</td>
+                <td>{{formatUser(score.user)}}</td>
+                <td>{{score.score}}</td>
+            </tr>
+      </tbody>
+      </table>
+</div>

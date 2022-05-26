@@ -1,4 +1,4 @@
-<app-header></app-header>
+<app-header (openPoll)="handlePoll($event)" ></app-header>
 <div style="position:relative; z-index: 1;">
     <div class="game-image-container">
         <button (click)="pickGame('ahorcado')">
@@ -15,12 +15,21 @@
         </button>
     </div>
     <div class="home-content">
-        <div class="game">
+        <div class="game col-9">
             <router-outlet></router-outlet>
         </div>
-        <!-- <app-chat></app-chat> -->
-        <app-chat></app-chat>
+        <div class="col-3 d-flex justify-content-end">
+            <mat-tab-group class="tabs" (selectedTabChange)="onTabChanged($event);">
+                <mat-tab label="Highscore" class="tab">
+                    <app-highscore [highscore]="highscore" ></app-highscore>
+                </mat-tab>
+                <mat-tab label="Chat">
+                    <app-chat></app-chat>
+                </mat-tab>
+            </mat-tab-group>
+        </div>
     </div>
 </div>
+<app-footer></app-footer>
 <ng-particles [id]="id" [options]="particlesOptions" [particlesInit]="particlesInit"
               (particlesLoaded)="particlesLoaded($event)"></ng-particles>

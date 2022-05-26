@@ -22,34 +22,23 @@ import { ToastrModule } from 'ngx-toastr';
 import { LoginModule } from './page/login/login.module';
 import { NgxSpinnerModule } from 'ngx-spinner';
 import { ChatComponent } from './components/chat/chat.component';
-import { GameComponent } from './components/game/game.component';
-import { HangmanComponent } from './components/game/hangman/hangman.component';
 import { HttpClientModule } from '@angular/common/http';
-import { HangmanDisplayComponent } from './components/game/hangman/hangman-display/hangman-display.component';
-import { HangmanKeyboardComponent } from './components/game/hangman/hangman-keyboard/hangman-keyboard.component';
-import { HangmanQuestionComponent } from './components/game/hangman/hangman-question/hangman-question.component';
-import { HigherlowerComponent } from './components/game/higherlower/higherlower.component';
 import { MatSliderModule } from '@angular/material/slider';
-import { PreguntadosComponent } from './components/game/preguntados/preguntados.component';
-import { SnakeComponent } from './components/game/snake/snake.component';
 import { NgParticlesModule } from 'ng-particles';
+import { FooterComponent } from './components/footer/footer.component';
+import { HighscoreComponent } from './components/highscore/highscore.component';
+import { MatTabsModule } from '@angular/material/tabs';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
     NotfoundComponent,
-    PreguntadosComponent,
     HomeComponent,
     AboutComponent,
     ChatComponent,
-    GameComponent,
-    HangmanComponent,
-    HangmanDisplayComponent,
-    HangmanKeyboardComponent,
-    HangmanQuestionComponent,
-    HigherlowerComponent,
-    SnakeComponent
+    FooterComponent,
+    HighscoreComponent,
   ],
   imports: [
     NgParticlesModule,
@@ -70,6 +59,7 @@ import { NgParticlesModule } from 'ng-particles';
     AngularFireDatabaseModule,
     ToastrModule.forRoot(),
     NgxSpinnerModule,
+    MatTabsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -11,7 +11,20 @@
     display: flex;
     height: 500px;
     flex-direction: row;
-    justify-content: flex-end;
+    justify-content: space-between;
+}
+
+.tabs{
+    background-color: white;
+    border-radius: 20px;
+    height: 100%;
+}
+
+.tab{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex: 1;
 }
 
 .game-image-container{
@@ -23,15 +36,10 @@
 }
 
 .game{
-    display: flex;
-    flex:1;
     background-color: white;
     height:100%;
     border-radius: 20px;
-    margin-right: 50px;
     border:1px solid #4080FF;
-    align-items: center;
-    justify-content: center;
 }
 
 button{

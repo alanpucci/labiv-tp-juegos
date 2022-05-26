@@ -1,0 +1,66 @@
+<form [formGroup]="poll" (submit)="submitPoll()">
+<mat-dialog-content class="modal-container">
+    <h1>Contanos que te pareció la experiencia</h1>
+    <h2>Ingresá tus datos</h2>
+        <div class="row">
+            <div class="col-6">
+                <mat-form-field appearance="fill">
+                    <mat-label>Apellido</mat-label>
+                    <input matInput formControlName="lastName">
+                </mat-form-field>
+            </div>
+            <div class="col-6">
+                <mat-form-field appearance="fill">
+                    <mat-label>Nombre</mat-label>
+                    <input matInput formControlName="name">
+                </mat-form-field>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-6">
+                <mat-form-field appearance="fill">
+                    <mat-label>Edad</mat-label>
+                    <input matInput formControlName="age" type="number">
+                </mat-form-field>
+            </div>
+            <div class="col-6">
+                <mat-form-field appearance="fill">
+                    <mat-label>Teléfono</mat-label>
+                    <input matInput formControlName="cellPhone" type="number" [maxlength]="10">
+                </mat-form-field>
+            </div>
+        </div>
+        <h2>Contanos sobre los juegos</h2>
+        <div class="row">
+            <mat-form-field appearance="fill">
+                <mat-label>¿Cuál fue el juego que más te gustó?</mat-label>
+                <mat-select formControlName="bestGame">
+                    <mat-option value="ahorcado">Ahorcado</mat-option>
+                    <mat-option value="mayormenor">Mayor o menor</mat-option>
+                    <mat-option value="preguntados">Preguntados</mat-option>
+                    <mat-option value="vibora">Viborita</mat-option>
+                </mat-select>
+            </mat-form-field>
+        </div>
+        <div class="row radio-container">
+            <h3>¿Qué puntaje le das?</h3>
+            <mat-slider formControlName="score"
+                thumbLabel
+                tickInterval="1"
+                step="1"
+                min="0"
+                max="10"
+                aria-label="units"></mat-slider>
+        </div>
+        <div class="row">
+            <mat-form-field appearance="fill">
+                <mat-label>¿Algo más que quieras agregar?</mat-label>
+                <textarea matInput formControlName="comments"></textarea>
+            </mat-form-field>
+        </div>
+    </mat-dialog-content>
+    <mat-dialog-actions align="end">
+        <button mat-button mat-dialog-close>Cancelar</button>
+        <button mat-button type="submit">Enviar</button>
+    </mat-dialog-actions>
+</form>

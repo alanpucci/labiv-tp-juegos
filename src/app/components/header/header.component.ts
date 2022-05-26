@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 import { LoginService } from 'src/app/services/login.service';
 
 @Component({
@@ -8,6 +8,7 @@ import { LoginService } from 'src/app/services/login.service';
 })
 export class HeaderComponent implements OnInit {
 
+  @Output() openPoll= new EventEmitter<boolean>();
   constructor(private auth:LoginService) { }
 
   ngOnInit(): void {
@@ -15,5 +16,9 @@ export class HeaderComponent implements OnInit {
 
   signOut(){
     this.auth.logout();
+  }
+
+  handlePoll(){
+    this.openPoll.emit(true);
   }
 }

@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { particlesConfig } from 'src/app/utils/utils';
+import { loadFull } from 'tsparticles';
+import { Engine } from 'tsparticles-engine';
 
 @Component({
   selector: 'app-notfound',
@@ -7,9 +10,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NotfoundComponent implements OnInit {
 
+  id = "tsparticles";
+
+  particlesOptions = particlesConfig
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  async particlesInit(engine: Engine): Promise<void> {
+    await loadFull(engine);
   }
 
 }
